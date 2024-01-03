@@ -2,6 +2,10 @@
 import NextJS from "./icons/NextJS.astro"
 import Tailwind from "./icons/Tailwind.astro"
 import React from "./icons/React.astro"
+import Node from "./icons/Node.astro"
+import Express from "./icons/Express.astro"
+import Mongo from "./icons/Mongo.astro"
+import SocialPill from "../components/SocialPill.astro"
 
 const TAGS = {
   NEXT: {
@@ -19,16 +23,31 @@ const TAGS = {
     class: "bg-[#003159] text-white",
     icon: Tailwind,
   },
+  NODE: {
+    name: "Node.js",
+    class: "bg-[#68A063] text-white",
+    icon: Node,
+  },
+  EXPRESS: {
+    name: "Express.js",
+    class: "bg-[#303030] text-white",
+    icon: Express,
+  },
+  MONGODB: {
+    name: "MongoDB",
+    class: "bg-[#4DB33D] text-white",
+    icon: Mongo,
+  },
 }
 const PROJECTS = [
   {
-    title: "SVGL - A beautiful library with SVG logos",
+    title: "Finapay - Pay & Expense Manager",
     description:
-      "Created from scratch with Next.js and Tailwind CSS. It's a library with SVG logos from the most popular brands. Optimized for SEO and performance.",
-    link: "https://svgl.vercel.app/",
-    github: "https://github.com/pheralb/svgl",
+      "Aplicación web para mandar o recibir dinero, y llevar un registro de tus gastos. Tambien tienes la opcion de invertir tu dinero en diferentes fondos de inversion.",
+    link: "https://finapay.netlify.app/",
+    github: "https://github.com/aaridoms/finapay-client",
     image: "/projects/finapay.png",
-    tags: [TAGS.REACT, TAGS.TAILWIND],
+    tags: [TAGS.REACT, TAGS.NODE, TAGS.EXPRESS, TAGS.MONGODB, TAGS.TAILWIND],
   },
 ]
 ---
@@ -56,6 +75,11 @@ const PROJECTS = [
         src={image}
         alt={`Captura de pantalla del proyecto ${image}`}
       />
+      <div class="flex items-center mt-4">
+        <SocialPill href="https://finapay.netlify.app/">
+          See the project !
+        </SocialPill>
+      </div>
     </article>
   ))
 }
