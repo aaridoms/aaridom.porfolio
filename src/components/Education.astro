@@ -1,0 +1,21 @@
+---
+import EducationItem from "./EducationItem.astro";
+const EDUCATION = [
+  {
+    date: "Julio 2023 - Septiembre 2023",
+    title: "Bootcamp Full Stack Developer - Ironhack",
+    description: "Bootcamp intensivo de 9 semanas HTML | CSS | JavaScript(ES6) | React | Node.js | Express | MongoDB",
+    link: "https://www.credential.net/5974d9ad-7a2a-490e-b6c6-b3eddfa4ec2d#gs.331ffh"
+  }
+]
+---
+
+<ol class="relative border-s border-gray-200 ml-3">
+  {
+    EDUCATION.map((education) => (
+      <li class="mb-10 ms-4">
+        <EducationItem {...education} />
+      </li>
+    ))
+  }
+</ol>
