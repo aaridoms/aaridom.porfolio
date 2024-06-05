@@ -3,35 +3,39 @@ import ExperienceItem from "./ExperienceItem.astro"
 const EXPERIENCIE = [
   {
     date: "Julio 2019",
-    title: "Full Stack Web Developer − Facua",
+    title: "Full Stack Web Developer",
+    company: "Facua",
     description:
       "Diseño, desarollo y mantenimiento de aplicaciones web a través de distintas tecnologías como JavaScript, PHP y Java, así como administración de bases de datos MySQL. Despliegue en AWS.",
   },
   {
     date: "Agosto 2018",
-    title: "Software Developer − Isotrol",
+    title: "Software Developer",
+    company: "Isotrol",
     description:
       "Diseño, desarollo y mantenimiento de aplicaciones web a través de distintas tecnologías como PHP, Symfony y Bash. Ejecución de pruebas unitarias y creación de paquetes Debian para su insta;ación en distintas versiones de Linux.",
   },
   {
     date: "Marzo 2018",
-    title: "SAP ABAP Developer - NTT Data",
+    title: "SAP ABAP Developer",
+    company: "NTT Data",
     description:
       "Programador SAP MM/FI en la implementación de un nuevo cliente, testing y creación de un programa para la carga masiva de datos.",
   },
   {
-    date: "Marzo 2016",
-    title: "Web Developer − SymCredit s.r.o",
+    date: "Marzo 2026",
+    title: "Web Developer",
+    company: "SymCredit s.r.o.",
     description:
-      "Implementación de nuevos plugins y componentes para la página web, eliminación de bugs y mantenimiento de la página, implementación de la traducción del Checo al Español. Administración de los datos bancarios de los clientes en la base de datos AMADEOS.",
-  }
+      "Implementación de nuevos plugins y componentes para la página web, eliminación de bugs y mantenimiento de la página, implementación de la traducción del Checo al Español. Administración de los datos bancarios de los clientes en la base de datos AMADEOS."
+  },
 ]
 ---
 
-<ol class="relative border-s border-gray-200 ml-3">
+<ol class="relative mt-16">
   {
     EXPERIENCIE.map((experiencie) => (
-      <li class="mb-10 ms-4">
+      <li class="">
         <ExperienceItem {...experiencie} />
       </li>
     ))

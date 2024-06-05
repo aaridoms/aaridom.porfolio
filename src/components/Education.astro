@@ -1,25 +1,27 @@
 ---
 import EducationItem from "./EducationItem.astro";
+
 const EDUCATION = [
   {
-    date: "Julio 2023 - Septiembre 2023",
-    title: "Bootcamp Full Stack Developer - Ironhack",
+    title: "Bootcamp Full Stack Developer",
+    company: "Ironhack",
     description: "Bootcamp intensivo de 9 semanas HTML | CSS | JavaScript(ES6) | React | Node.js | Express | MongoDB",
-    link: "https://www.credential.net/5974d9ad-7a2a-490e-b6c6-b3eddfa4ec2d#gs.331ffh"
+    link: "https://www.credential.net/5974d9ad-7a2a-490e-b6c6-b3eddfa4ec2d#gs.331ffh",
+    date: "Julio 2023 - Septiembre 2023"
   },
   {
-    date: "Septiembre 2018 - Junio 2018",
-    title: "Técnico Superior en Desarrollo de Aplicaciones Multiplataformas - FESAC SSCC",
+    title: "Técnico Superior en Desarrollo de Aplicaciones Multiplataformas",
+    company: "FESAC SSCC",
     description: "Grado superior en desarrollo de aplicaciones multiplataforma con Java, C#, Mysql",
-    link: ""
+    date: "Septiembre 2018 - Junio 2018"
   }
 ]
 ---
 
-<ol class="relative border-s border-gray-200 ml-3">
+<ol class="relative mt-16">
   {
     EDUCATION.map((education) => (
-      <li class="mb-10 ms-4">
+      <li class="">
         <EducationItem {...education} />
       </li>
     ))
